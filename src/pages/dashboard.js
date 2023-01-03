@@ -4,11 +4,11 @@ import Header from "../components/header";
 import WalletInfo from "../components/wallet-info";
 import Mint from "../dialogs/mint";
 
-const Dashboard = () => {
+const Dashboard = (props) => {
     const [mint_var, mint_func] = useState(false);
     return (
         <section className='w-full h-full bg-white flex flex-col space-y-2'>
-        <Header mint_func={mint_func} connected={true}/>
+        <Header screen_func={props.screen_func} mint_func={mint_func} connected={true}/>
         <WalletInfo mint_func={mint_func} />
         {!mint_var ? <></> : <Mint mint_func={mint_func} />}
         <Footer/>

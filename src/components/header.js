@@ -3,7 +3,9 @@ import Wallets from "../dialogs/wallet-alert";
 const Header = (props) => {
     return (
         <nav className="w-full fixed top-0 left-0 h-fit grid grid-cols-4 bg-transparent p-6">
-           <section><img className="w-20 h-20" src="https://www.upfinance.io/static/media/logo.73ac2c656ed0f28ef385.png"></img></section>
+           <section><img onClick={()=>{
+             props.screen_func(false);
+           }} className="w-20 h-20 cursor-pointer" src="https://www.upfinance.io/static/media/logo.73ac2c656ed0f28ef385.png"></img></section>
            <section className="md:col-span-2"></section>
            <section className="col-span-1 w-full h-fit my-auto flex flex-row space-x-8">
                 <a target="_blank" href="https://discord.com/invite/V4GkGfZZUf" className="h-full">

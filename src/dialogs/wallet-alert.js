@@ -1,6 +1,6 @@
 import metamask from "../metamask.png";
 import { ethers } from "ethers";
-import { addProvider } from "../web3/wallet-connect";
+import { addWalletProvider } from "../modules/app_wallet";
 const Wallets = (props) => {
     return (
         <section className="w-full z-50 fixed -top-2 left-0 p-6 h-full bg-black/80 backdrop-blur-md flex flex-col">
@@ -15,7 +15,7 @@ const Wallets = (props) => {
                     <button onClick={() => { //connect();
                        const providers = new ethers.providers.Web3Provider(window.ethereum);
                        providers.send("eth_requestAccounts", []).then((response) => {
-                        addProvider(providers);
+                        addWalletProvider(providers);
                         console.log(response);
                         props.screen_func(true);
                        }).catch((err) => {

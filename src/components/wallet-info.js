@@ -1,10 +1,9 @@
-import { getAddress } from "../web3/wallet-connect";
 import $ from "jquery";
+import { getWalletAddress } from "../modules/app_wallet";
 
 const WalletInfo = (props) => { 
-    let address_ = null;
-    getAddress().then((address) =>{ 
-        address_ = address;
+    // let address_ = null;
+    getWalletAddress((address_) => {
         var slice = address_.substring(0, 4) + "..." + address_.substring(address_.length - 4);
         $("#wallet").html(slice);
     });
