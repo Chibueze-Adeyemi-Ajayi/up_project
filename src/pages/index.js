@@ -11,7 +11,7 @@ const Index = () => {
             <Header connect_wallet_func={connect_wallet_func}/>
             <Banner connect_wallet_func={connect_wallet_func}/>
             <Footer/>
-            { connect_wallet_var ? <Wallets connect_wallet_func={connect_wallet_func}/> : <></>}
+            {connect_wallet_var ? <Wallets connect_wallet_func={connect_wallet_func}/> : <></>}
         </section>
     )
 }
