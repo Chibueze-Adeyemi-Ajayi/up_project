@@ -1,5 +1,6 @@
 import metamask from "../metamask.png";
-
+import { ethers } from "ethers";
+import { addProvider } from "../web3/wallet-connect";
 const Wallets = (props) => {
     return (
         <section className="w-full z-50 fixed -top-2 left-0 p-6 h-full bg-black/80 backdrop-blur-md flex flex-col">
@@ -11,7 +12,16 @@ const Wallets = (props) => {
                             props.connect_wallet_func(false);
                         }} className="text-xl font-semibold">x</button>
                     </div>
-                    <button className="w-full transform transition-all duration-300 hover:bg-black/20 px-3 py-1 pt-2 text-left h-fit flex flex-row">
+                    <button onClick={() => { //connect();
+                       const providers = new ethers.providers.Web3Provider(window.ethereum);
+                       providers.send("eth_requestAccounts", []).then((response) => {
+                        addProvider(providers);
+                        console.log(response);
+                        props.screen_func(true);
+                       }).catch((err) => {
+                        alert("Please connect to metamask before proceeding");
+                       }).finally(() => props.connect_wallet_func(false));
+                    }} className="w-full transform transition-all duration-300 hover:bg-black/20 px-3 py-1 pt-2 text-left h-fit flex flex-row">
                         <font className="w-full h-fit font-semibold">Metamask</font>
                         <img className="w-8 my-auto h-8" src={metamask}/>
                     </button>
