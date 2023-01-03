@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/header';
 import Banner from './components/banner';
 import Footer from './components/footer';
+import Wallets from './dialogs/wallet-alert';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header/>
       <Banner/>
       <Footer/>
+      <Wallets/>
     </section>
   );
 }
