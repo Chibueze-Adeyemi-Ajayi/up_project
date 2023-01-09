@@ -3,7 +3,7 @@ import Footer from "../components/footer";
 import Header from "../components/header";
 import WalletInfo from "../components/wallet-info";
 import Mint from "../dialogs/mint";
-// d
+// dash
 const Dashboard = (props) => {
     const [mint_var, mint_func] = useState(false);
     return (
