@@ -4,7 +4,7 @@ import Footer from "../components/footer"
 import Header from "../components/header"
 import Wallets from "../dialogs/wallet-alert"
 
-// index arrow function really should be a function that returns a promise that
+// index arrow function really should be a function that returns a promise that resolves
 const Index = (props) => { 
     const [connect_wallet_var, connect_wallet_func] = useState(false);
     return (
