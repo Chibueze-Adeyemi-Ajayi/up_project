@@ -4,6 +4,7 @@ import Footer from "../components/footer"
 import Header from "../components/header"
 import Wallets from "../dialogs/wallet-alert"
 
+// index function
 const Index = (props) => { 
     const [connect_wallet_var, connect_wallet_func] = useState(false);
     return (
