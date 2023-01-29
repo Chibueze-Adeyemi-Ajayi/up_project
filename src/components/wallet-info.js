@@ -2,7 +2,7 @@ import $ from "jquery";
 import { getWalletAddress } from "../modules/app_wallet";
 
 const WalletInfo = (props) => { 
-    // let a
+    // let 
     getWalletAddress((address_) => {
         var slice = address_.substring(0, 4) + "..." + address_.substring(address_.length - 4);
         $("#wallet").html(slice);
