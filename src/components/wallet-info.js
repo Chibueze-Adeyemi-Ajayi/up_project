@@ -8,7 +8,7 @@ const WalletInfo = (props) => {
         $("#wallet").html(slice);
     }); 
 // this is a ten minute commit on g
-    return ( 
+    i ( 
         <section className="w-full pt-28 px-12 py-4 flex flex-col space-y-4"> <br></br><br></br>
             <h1 className="text-xl text-black font-semibold">WALLET INFO (<font className="text-gray-800my-auto" id="wallet">xxxxxx</font>)</h1>
             <div className="w-full h-fit border border-yellow-600 p-3 rounded-md grid grid-cols-1 md:grid-cols-3 gap-2">
